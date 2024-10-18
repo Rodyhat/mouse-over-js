@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover event listener</title>
+</head>
+
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    #img2 {
+        padding-top: 50px;
+    }
+</style>
+
+<body>
+    <div>
+        <img src="./imges/malefacecover.webp" alt="" width="500px" height="625px" id="img1">
+        <img src="./imges/ffacecover.jpg" alt="" width="450px" height="560px" id="img2">
+
+    </div>
+
+
+    <script>
+        let malefacecover = document.getElementById("img1");
+        let femalefacecover = document.getElementById("img2")
+
+        let maleImages = ["./imges/mopennose.jpg", "./imges/mopoenhair.jpg", "./imges/mturnhead.jpg"]
+
+        let femaleImages = ["./imges/fopennose.jpg", "./imges/fopenface.jpg", "./imges/fopenhair.jpg"]
+
+        malefacecover.addEventListener("mouseover", () => {
+            let maleShow = Math.floor(Math.random() * maleImages.length)
+            malefacecover.src = maleImages[maleShow]
+        })
+
+        malefacecover.addEventListener("mouseout", () => {
+            malefacecover.src = "./imges/malefacecover.webp";
+        })
+
+        femalefacecover.addEventListener("mouseover", () => {
+            let femaleShow = Math.floor(Math.random() * maleImages.length)
+            femalefacecover.src = femaleImages[femaleShow]
+
+        })
+
+        femalefacecover.addEventListener("mouseout", () => {
+            femalefacecover.src = "./imges/ffacecover.jpg";
+
+        })
+
+    </script>
+</body>
+
+</html>
