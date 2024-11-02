@@ -25,8 +25,8 @@
 
 <body>
     <div>
-        <img src="./imges/malefacecover.webp" alt="" width="500px" height="625px" id="img1">
-        <img src="./imges/ffacecover.jpg" alt="" width="450px" height="560px" id="img2">
+        <img src="./malefacecover.webp" alt="" width="500px" height="625px" id="img1">
+        <img src="./ffacecover.jpg" alt="" width="450px" height="560px" id="img2">
 
     </div>
 
@@ -35,9 +35,9 @@
         let malefacecover = document.getElementById("img1");
         let femalefacecover = document.getElementById("img2")
 
-        let maleImages = ["./imges/mopennose.jpg", "./imges/mopoenhair.jpg", "./imges/mturnhead.jpg"]
+        let maleImages = ["./mopennose.jpg", "./mopoenhair.jpg", "./mturnhead.jpg"]
 
-        let femaleImages = ["./imges/fopennose.jpg", "./imges/fopenface.jpg", "./imges/fopenhair.jpg"]
+        let femaleImages = ["./fopennose.jpg", "./fopenface.jpg", "./fopenhair.jpg"]
 
         malefacecover.addEventListener("mouseover", () => {
             let maleShow = Math.floor(Math.random() * maleImages.length)
@@ -45,7 +45,7 @@
         })
 
         malefacecover.addEventListener("mouseout", () => {
-            malefacecover.src = "./imges/malefacecover.webp";
+            malefacecover.src = "./malefacecover.webp";
         })
 
         femalefacecover.addEventListener("mouseover", () => {
@@ -55,7 +55,7 @@
         })
 
         femalefacecover.addEventListener("mouseout", () => {
-            femalefacecover.src = "./imges/ffacecover.jpg";
+            femalefacecover.src = "./ffacecover.jpg";
 
         })
 
